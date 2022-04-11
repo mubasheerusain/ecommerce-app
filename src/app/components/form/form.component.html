@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-center align-items-center fs-5 mt-5">
+    <div class="card">
+        <div class="card-body m-3 text-primary">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3" [ngClass]="page === 'Login' ? 'd-none' : 'd-block'">
+                    <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2">
+                </div>
+                <div class="d-flex justify-content-between pt-3">
+                    <button type="button" class="btn btn-outline-primary" (click)="onClick()">{{ page }}</button>
+                    <a routerLink="/reset-password" class="my-auto text-decoration-none"
+                        [ngClass]="page === 'Login' ? 'd-block' : 'd-none'">Reset
+                        Password</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
